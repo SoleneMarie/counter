@@ -1,3 +1,4 @@
+<FontAwesomeIcon icon="fa-regular fa-calculator" />;
 const Header = (props) => {
   return (
     <>
