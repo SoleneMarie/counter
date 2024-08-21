@@ -1,38 +1,31 @@
+import OneButton from "./OneButton";
 const Buttons = (props) => {
   return (
     <>
       <main>
         <section className="counter">
           <div className="less">
-            <button
-              onClick={() => {
-                props.set(props.counter - 1);
-              }}
-            >
-              -
-            </button>
+            <OneButton
+              set={props.set}
+              counter={props.counter}
+              value={-1}
+              text="-"
+            />
           </div>
           <div className="total">
             <span>{props.counter}</span>
           </div>
           <div className="more">
-            <button
-              onClick={() => {
-                props.set(props.counter + 1);
-              }}
-            >
-              +
-            </button>
+            <OneButton
+              set={props.set}
+              counter={props.counter}
+              value={+1}
+              text="+"
+            />
           </div>
         </section>
         <div className="reset">
-          <button
-            onClick={() => {
-              props.counter(0);
-            }}
-          >
-            Reset
-          </button>
+          <OneButton set={props.set} counter={0} value={+0} text="reset" />
         </div>
       </main>
     </>
